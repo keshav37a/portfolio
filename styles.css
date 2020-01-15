@@ -1,0 +1,542 @@
+body{
+    margin: 0px;;
+}
+#body-header {   
+    background-image: url(images/img3.jpg);
+    height: 85vh;
+    /* filter: brightness(50%); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.7;
+}
+
+/* Horizontal Lists (for navigation) */
+.nav-links{
+    margin-top: 10px;
+}
+.horizontal-lists{
+    margin-top: 0;
+    padding:0;
+}
+
+.horizontal-lists li {
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.horizontal-lists li a{
+    list-style: none;
+    text-decoration: None;
+    margin-top: 10px;
+    font-family: sans-serif;
+    word-spacing: 50px;;
+    letter-spacing: 3px;
+    margin-left: 10px;
+    color: white;
+}
+
+#body-header li a:hover{
+    text-decoration: underline;
+    color: lightgrey;
+    transition: color 0.8s;
+}
+
+/* Horizontal Lists (for navigation) ENDS*/
+
+/* Name */
+
+#name-social-container{
+    margin-top: 20vh;
+}
+
+#name{
+    font-size: 3rem;
+    color: white;
+    text-transform: capitalize;
+    font-family: sans-serif;
+    letter-spacing: 0.1rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Name ENDS*/
+
+/* Social Media Icons */
+
+#name-social-container img{
+   height:24px; 
+   width:24px;
+   margin-left: 8px; 
+   margin-right: 8px;
+   margin-top: 3px; 
+   margin-bottom: 2px;
+   /* padding:3px; */
+   /* position: absolute; */
+   /* left: 0; */
+   /* right: 0; */
+   /* margin: auto; */
+   border-radius: 50%;
+   filter: invert(99%) sepia(0%) saturate(23%) hue-rotate(95deg) brightness(105%) contrast(100%);
+}
+#name-social-container img:hover{
+    /* border: 3px white solid; */
+    padding:0px;
+    box-shadow: 0px 0px 6px 4px red ;
+ }
+/* Social Media Icons ENDS */
+
+/* Sections using flex */
+section{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    width: 100%;
+    height:auto;
+    position: relative;
+    align-items: center;
+    margin-bottom: 5vh;
+}
+.section-header{
+    width:auto;
+    height:auto;
+    margin:auto;
+    padding: 20px 10px 10px;
+    text-align: center;
+    font-weight:400;
+}
+
+.section-header img{
+    height: 2rem;
+    width: 2rem;
+    filter: invert(31%) sepia(23%) saturate(4350%) hue-rotate(198deg) brightness(81%) contrast(85%);
+}
+
+.section-header span{
+    position: relative;
+    bottom: 1vh;
+    margin-left: 0.5rem;
+    display: inline-block;
+    /* padding-top:10px; */
+    font-size: 30px;
+    color:#2857a4;
+    margin-right: 0.5rem;
+    padding-bottom:3vh;
+}
+
+/* Sections using flex ENDS */
+
+
+/* About Section */
+#about img{
+    border-radius: 50%;
+    width: 12rem;
+    height: 12rem;
+    margin:auto;
+    margin-top: -7rem;
+    box-shadow: 0px 0px 6px 4px white;
+}
+
+#about p{
+    width: 70%;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-top: 2rem;
+    color: darkslategray;
+    font-weight: 300;
+    margin-left:12rem;
+    word-spacing: 0.5rem;
+    letter-spacing: 1px;;
+    font-family: sans-serif;
+    margin-right:12rem;
+}
+
+/* About Section ENDS*/
+
+
+/* Skills Section */
+
+.skills-display{
+    width: 70%;
+    height:auto;
+    /* border: 1px black solid; */
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.skills-progress{
+    background-color:rgb(184, 190, 184);
+    height: 3.5vh;
+    width: 14vw;
+    margin:2vh;
+    display: inline-flex;
+    margin-bottom:6vh;
+    margin-right: 8vh;
+}
+
+#bootstrap-icon{
+    filter: invert(27%) sepia(23%) saturate(1353%) hue-rotate(222deg) brightness(90%) contrast(92%);
+}
+
+#html-icon{
+    filter: invert(71%) sepia(85%) saturate(5423%) hue-rotate(346deg) brightness(97%) contrast(86%);
+}
+
+#css-icon{
+    filter: invert(72%) sepia(75%) saturate(6293%) hue-rotate(187deg) brightness(103%) contrast(91%);
+}
+
+#javascript-icon{
+    filter: invert(68%) sepia(70%) saturate(547%) hue-rotate(345deg) brightness(94%) contrast(92%);
+}
+
+#java:hover{
+    box-shadow: 0px 0px 6px 4px orangered;
+}
+
+#html:hover{
+    box-shadow: 0px 0px 6px 4px blueviolet;
+}
+#css:hover{
+    box-shadow: 0px 0px 6px 4px blue;
+}
+#javascript:hover{
+    box-shadow: 0px 0px 6px 4px orangered;
+}
+#bootstrap:hover{
+    box-shadow: 0px 0px 6px 4px darkblue;
+}
+#android:hover{
+    box-shadow: 0px 0px 6px 4px darkgreen;
+}
+#angular:hover{
+    box-shadow: 0px 0px 6px 4px red;
+}
+#python:hover{
+    box-shadow: 0px 0px 6px 4px blueviolet;
+}
+#sql:hover{
+    box-shadow: 0px 0px 6px 4px black;
+}
+
+.left-right-curve{
+    /* border-top-left-radius: 70%100px;
+    border-bottom-left-radius: 70%100px;
+    border-top-right-radius: 70%100px;   
+    border-bottom-right-radius: 70%100px;    */
+    border-radius:0.8rem;
+}
+
+#progress{
+    text-align: left;
+}
+
+.skill-name span{
+    padding-top: 0.5vh;
+    padding-left: 1.5vh;
+    color: whitesmoke;
+}
+
+.skills-icon{
+    position: relative;
+    top: 2vh;
+    height: 6vh;
+    width: 6vh;
+}
+
+
+/* Skills Section ENDS*/
+
+/* Experience Section */
+.timeline{
+    position: relative;
+    width: 75%;
+    margin-top: 5vh;
+    /* border:2px black solid; */
+}
+
+.timeline-box{
+    position: relative;
+    width:45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* min-height: 100px; */
+    /* border: 1px solid black; */
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight:700;
+    color:#2857a4;
+    text-align: justify;
+    padding: 1vh;
+}
+
+.timeline-box:nth-child(2n){
+    left: 57%;
+}
+
+.timeline-box .experience-subheading-container{
+    text-align: right;
+}
+
+.traveller-icon{
+    left: 51%; 
+    top:5%; 
+    filter: invert(23%) sepia(86%) saturate(578%) hue-rotate(211deg) brightness(94%) contrast(94%); 
+    position: sticky;
+    transform: rotate(90deg);
+}
+
+.experience-icon{
+    margin: 1vh;
+    height: 8vh;
+    width:4vw;
+    display: inline-block;
+}
+
+.experience-subheading-container{
+    position: relative; 
+    display: inline-block;
+    /* left: 9vw; */
+}
+
+.experience-title{
+    font-size: 1.5vw;
+}
+
+.experience-organisation{
+    color: #403066;
+}
+
+.experience-duration{
+    font-weight: 600; 
+}
+
+.experience-content{
+    font-weight: 600;
+    color: black;
+}
+
+.timeline-divider{
+    top: 5%;
+    position: absolute;
+    left: 53%;
+    height: 88%;
+    width: 0%;
+    border: 2px dashed darkslateblue;
+}
+
+
+/* Experience section ends  */
+
+/* Portfolio Projects  */
+.portfolio-projects{
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-projects img{
+    height: 30vh;
+    width: 20vw;
+    padding: 1vh;
+    margin: 4vh;
+    border: 2px solid darkslateblue;
+}
+
+.img-description{
+    visibility: visible;
+    color: darkslateblue;
+    position: relative;
+    top: -32vh;
+    left: -19vw;
+    text-align: justify;
+}
+
+#crypto-content-lightbox{
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    height: 0;
+    width: 0;
+}
+
+#crypto-content-lightbox:target{
+    height: 50%;
+    width: 20%;
+    visibility: visible;
+    background-color: transparent;
+    left: 0%;
+    top: -80%;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+#face-detect-content-lightbox{
+    overflow: hidden;
+    visibility: hidden;
+    transition: all 0.2s ease-in-out;
+    height: 0;
+    width: 0;
+}
+
+#face-detect-content-lightbox:target{
+    height: 50%;
+    width: 20%;
+    visibility: visible;
+    background-color: transparent;
+    left: 0%;
+    top: -80%;
+    border: 1px solid black;
+    padding: 1rem;
+}
+
+#face-detect-content-lightbox span{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:1.5rem;
+    text-emphasis: bold;
+}
+
+.portfolio-projects img:hover{
+    opacity: 0.5;
+    
+}
+.portfolio-projects img:hover .img-description{
+    background-color: yellowgreen;
+    color: aqua;
+}
+
+.project-title{
+    font-weight: 700;
+    font-size: 1.5vw;
+}
+
+/* Portfolio Projects  ENDS*/
+
+/* Contact Section  */
+.contact-container{
+    height: 80vh;
+    width: 97%;
+    background-image: linear-gradient(to bottom left, #2857a4, #403066);
+}
+
+.contact-heading{
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: #efefef;
+    font-size: 2rem;
+}
+
+.flex-container{
+    display: flex;
+}
+
+.contact-icon{
+    height:3rem;
+    width:3rem;
+    position: relative;
+    top: 2vh;
+    filter: invert(98%) sepia(6%) saturate(475%) hue-rotate(246deg) brightness(115%) contrast(87%);
+    margin-right: 2.5vh;
+}
+
+.contact-form{
+    display: inline-block;
+    width: 70%;
+    height:auto;
+    /* background-color: #403066; */
+    margin-top:2rem;
+    margin-left: 3rem;
+}
+
+.contact-form input, textarea{
+    background-color: transparent;
+    color: #efefef;
+    border: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 12vh;
+    outline-style: none;
+    padding: 0.2rem;
+    border-bottom: 1px solid lightgrey;
+}
+
+.contact-form button{
+    text-align: center;
+    background-color: transparent;
+    color: #efefef;
+    padding: 0.5rem;
+    font-weight: 600;
+    border: 1px solid white;
+    position: relative;
+    left: 35%;
+}
+
+.contact-subheading{
+    font-weight: 600;
+    color: #efefef;
+    margin-bottom: 1rem;
+    font-size:1.2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-subheading-content{
+    color: #efefef;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:1rem;
+}
+
+::placeholder{
+    color: lightgrey;
+}
+
+.address-icon{
+    position: relative;
+    top: 0.05rem;
+    margin-right: 0.25rem;
+    height: 1rem;;
+    width: 1rem;
+    display: inline-block;
+    filter: invert(98%) sepia(6%) saturate(475%) hue-rotate(246deg) brightness(115%) contrast(87%);
+}
+
+.address-content{
+    margin-top: 0.5rem;
+}
+
+#submit-form{
+    display: inline-block;
+}
+
+/* Contact Section  Ends*/
+
+
+/* General */
+.text-center{
+    text-align: center;
+}
+
+.zero-padding{
+    padding: 0;
+}
+
+.mar-top4rem{
+    margin-top: 4rem;
+}
+.red-col{
+    color: red;
+}
+.flex-rw-spc-ar{
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-around;
+}
+.fw700{
+    font-weight: 700;
+}
+/* General ENDS*/
