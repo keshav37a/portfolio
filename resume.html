@@ -13,6 +13,7 @@
             <ul id="nav-links-list" class="horizontal-lists text-center">
                 <li><a href="#">Home</a></li>
                 <li><a onclick="smoothScrollTo('about')">About</a></li>
+                <li><a onclick="smoothScrollTo('skills')">Skills</a></li>
                 <li><a onclick="smoothScrollTo('experience')">Experience</a></li>
                 <li><a onclick="smoothScrollTo('education')">Education</a></li>
                 <li><a onclick="smoothScrollTo('portfolio')">Portfolio</a></li>
@@ -60,60 +61,61 @@
                 <span>SKILLS</span>
             </div>
 
-            <div class="skills-display">
-                <span>
+            <div id="skills-group" class="skills-display">
+
+                <div>
                     <img src="images/java.svg" class="skills-icon">
-                    <div class="skills-progress left-right-curve" id="java" style="">
-                        <div id="progress" class="left-right-curve"
+                    <div class="skills-progress left-right-curve" id="java">
+                        <div id="progress" class="skillPerc left-right-curve" data-progress="60"
                             style="background-image: linear-gradient(to bottom right, orange, red); width: 80%; height: 100%;">
                             <div class="skill-name">
                                 <span>Java</span>
                             </div>
                         </div>
                     </div>
-                </span>
+                </div>
 
 
-                <span>
+                <div>
                     <img src="images/html.svg" class="skills-icon" id="html-icon">
                     <div class="skills-progress left-right-curve" id="html">
-                        <div id="progress" class="left-right-curve"
+                        <div id="progress" class="skillPerc left-right-curve" data-progress="60"
                             style="background-image: linear-gradient(to bottom right, blue, violet);; width: 60%; height: 100%;">
                             <div class="skill-name">
                                 <span>HTML</span>
                             </div>
                         </div>
                     </div>
-                </span>
+                </div>
 
-                <span>
+                <div>
                     <img src="images/css3.svg" class="skills-icon" id="css-icon">
                     <div class="skills-progress left-right-curve" id="css">
-                        <div id="progress" class="left-right-curve"
+                        <div id="progress" class="skillPerc left-right-curve" data-progress="50"
                             style="background-image: linear-gradient(to bottom right, darkblue, cyan); width: 50%; height: 100%;">
                             <div class="skill-name">
                                 <span>CSS</span>
                             </div>
                         </div>
                     </div>
-                </span>
+                </div>
 
-                <span>
+                <div>
                     <img src="images/javascript.svg" class="skills-icon" id="javascript-icon">
                     <div class="skills-progress left-right-curve" id="javascript">
-                        <div id="progress" class="left-right-curve"
+                        <div id="progress" class="skillPerc left-right-curve" data-progress="50"
                             style="background-image: linear-gradient(to bottom right, orange, brown); width: 20%; height: 100%;">
                             <div class="skill-name">
                                 <span>Javascript</span>
                             </div>
                         </div>
                     </div>
-                </span>
+                </div>
 
-                <span>
+                <div>
                     <img src="images/bootstrap.svg" class="skills-icon" id="bootstrap-icon">
                     <div class="skills-progress left-right-curve" id="bootstrap">
-                        <div id="progress" class="left-right-curve"
+                        <div id="progress" class="skillPerc left-right-curve" data-progress="50"
                             style="background-image: linear-gradient(to bottom right, blue, green); width: 50%; height: 100%;">
                             <div>
                                 <div class="skill-name">
@@ -123,12 +125,12 @@
 
                         </div>
                     </div>
-                </span>
+                </div>
 
-                <span>
+                <div>
                     <img src="images/android.svg" class="skills-icon">
                     <div class="skills-progress left-right-curve" id="android">
-                        <div id="progress" class="left-right-curve"
+                        <div id="progress" class="skillPerc left-right-curve" data-progress="50"
                             style="background-image: linear-gradient(to bottom right, lightgreen, darkgreen); width: 50%; height: 100%;">
                             <div>
                                 <div class="skill-name">
@@ -137,44 +139,46 @@
                             </div>
                         </div>
                     </div>
-                </span>
+                </div>
 
-                <span>
+                <div>
                     <img src="images/angular.svg" class="skills-icon">
                     <div class="skills-progress left-right-curve" id="angular">
-                        <div id="progress" class="left-right-curve"
+                        <div id="progress" class="skillPerc left-right-curve" data-progress="50"
                             style="background-image: linear-gradient(to bottom right, red, darkred); width: 30%; height: 100%;">
                             <div class="skill-name">
                                 <span>Angular</span>
                             </div>
                         </div>
                     </div>
-                </span>
+                </div>
 
-                <span>
+                <div>
                     <img src="images/python.svg" class="skills-icon">
                     <div class="skills-progress left-right-curve" id="python">
-                        <div id="progress" class="left-right-curve"
+                        <div id="progress" class="skillPerc left-right-curve" data-progress="60"
                             style="background-image: linear-gradient(to bottom right, darkblue, violet); width: 60%; height: 100%;">
                             <div class="skill-name">
                                 <span>Python</span>
                             </div>
                         </div>
                     </div>
-                </span>
+                </div>
 
-                <span>
+                <div>
                     <img src="images/sql.svg" class="skills-icon">
                     <div class="skills-progress left-right-curve" id="sql">
-                        <div id="progress" class="left-right-curve"
+                        <div id="progress" class="skillPerc left-right-curve" data-progress="70"
                             style="background-image: linear-gradient(to bottom right, black, darkslategrey); width: 70%; height: 100%;">
                             <div class="skill-name">
                                 <span>SQL</span>
                             </div>
                         </div>
                     </div>
+                </div>
+                
             </div>
-            </span>
+
         </section>
 
         <section id="experience">
@@ -305,7 +309,7 @@
                         <div class="project-image-container">
                             <img class="project-img" src="images/project-1.jpg">
                         </div>
-    
+
                         <div class="project-description">
                             <p>I developed an android application that tracks the real time prices of
                                 different
@@ -316,7 +320,7 @@
                             </p>
                         </div>
                     </a>
-                    
+
                 </div>
 
                 <div id="knn-project" class="project-container">
@@ -324,7 +328,7 @@
                         <div class="project-image-container">
                             <img class="project-img" src="images/project-2.jpg">
                         </div>
-    
+
                         <div class="project-description">
                             <p>Developed a face detection and recognition application in Python which
                                 uses KNN(K-Nearest Neighbours) Algorithm. The detection script will
@@ -335,7 +339,7 @@
                     </a>
                 </div>
 
-                
+
             </div>
         </section>
         <section id="contact">
