@@ -1,12 +1,33 @@
 var skillsGroup = document.getElementById('skills-group');
+var skillProgess=document.querySelectorAll("#skills-group > div .skills-progress");
 var progressBar = document.querySelectorAll('.skills-progress>div');
+console.log('animation done array created');
+var animationDoneArray = new Array(skillsGroup.length);
+var currentWidthArray = [];
+for(var i=0; i<animationDoneArray.length; i++){
+    animationDoneArray[i]=false;
+}
+for(var i=0; i<progressBar.length; i++){
+    currentWidthArray.push(0);
+}
+var counter = 0;
 console.log(progressBar);
 console.log(skillsGroup);
 var skillGroupCoordinates = skillsGroup.getBoundingClientRect();
-var animationDone = false;
+// var animationDone = false;
 var currentWidth = 0;
 var instanceIdFillBars;
 initialiseBars();
+function isInView(ele)
+{
+    var coor=ele.getBoundingClientRect();
+    return coor.top<=window.innerHeight;
+}
+
+function initialiseBar(bar)
+{
+    bar.style.width=0+"%";
+}
 
 function smoothScrollTo(elementId){
     var time = 0;
@@ -31,51 +52,90 @@ function smoothScrollTo(elementId){
 // console.log(skills[1]);
 
 window.addEventListener('scroll', checkScroll);
+
+
 function checkScroll(){
     // var currPos = window.scrollY + window.innerHeight;
-    var coordinates = skillsGroup.getBoundingClientRect();
-    if(coordinates.top<=window.innerHeight){
-        console.log("reached skills section");
-        if(animationDone==false){
-            console.log("animation done false");
-            fillBars();
-            animationDone = true;
-        }    
-    }
-    else if(coordinates.top>window.innerHeight){
-        animationDone = false;
-        initialiseBars();
-    }
+    console.log("checkscroll");
+    // for(var i=0; i<progressBar.length; i++){
+    //     var bar = progressBar[i];
+        //console.log(bar,i);
+        // var coordinates = bar.getBoundingClientRect();
+        // if(coordinates.top<=window.innerHeight && !animationDoneArray[i]){
+            //console.log(counter+"reached skills section for bar "+i);
+           // console.log(animationDoneArray);
 
+                //console.log(counter+"animation done true for bar" + i);
+    //             console.log("visible",bar);
+    //             fillBars(bar, i);
+    //             animationDoneArray[i] = true;
+            
+    //     }
+    //     else if(coordinates.top>window.innerHeight){
+    //         console.log("invisible",bar);
+    //         animationDoneArray[i] = false;
+    //         initialiseBar(bar);
+    //     }
+    // }
+    for(var i=0;i<skillProgess.length;i++)
+    {
+        if(!animationDoneArray[i] && isInView(skillProgess[i]))
+        {
+            fillBar(skillProgess[i].firstElementChild);
+            animationDoneArray[i]=true;
+        }
+        else if(!isInView(skillProgess[i]))
+        {
+            initialiseBar(skillProgess[i].firstElementChild);
+            animationDoneArray[i]=false;
+        }
+    }
 }
 
 function initialiseBars(){
-    console.log("initialise bars called ");
+    console.log(counter+"initialise bars called ");
     for(var bar of progressBar){
         bar.style.width = 0+'%';
     }
 }
 
 
-function fillBars(){
-    console.log("fillBars called");
-    for(let bar of progressBar){
-        currentWidth = 0;
-        let targetWidth = bar.dataset.progress;
-        instanceIdFillBars = setInterval(increaseCurrentWidth, 10, bar, targetWidth);
-    }
+function fillBars(bar, i){
+    console.log(counter+"fillBars called for bar" + i);
+    let targetWidth = bar.dataset.progress;
+    instanceIdFillBars = setInterval(increaseCurrentWidth, 10, bar, targetWidth, i);
 }
 
-function increaseCurrentWidth(bar, targetWidth){
-    if(currentWidth>=targetWidth){
+function fillBar(bar)
+{
+    var curr=0;
+    var target=bar.getAttribute("data-progress");
+    function barFilling()
+    {
+        if(curr>=target)
+        {
+            clearInterval(id1);
+            return;
+        }
+        curr++;
+        bar.style.width=curr+"%";
+    }
+    var id1=setInterval(barFilling,10);
+}
+function increaseCurrentWidth(bar, targetWidth, i){
+    //console.log('increase current width for bar ' + i +' called' );
+    //console.log(currentWidthArray);
+    if(currentWidthArray[i]>=targetWidth){
+        //console.log("currentWidth:"+currentWidthArray[i]+" targetWidth:"+targetWidth);
+        //console.log('clearinterval for bar'+i+' called');
         clearInterval(instanceIdFillBars);
         // currentWidth = 0;
         return;
     }
-    console.log(currentWidth);
-    currentWidth+=0.05;
-    bar.style.width = currentWidth+'%';
-    return currentWidth;
+    // console.log(currentWidth);
+    currentWidthArray[i]+=0.5;
+    bar.style.width = currentWidthArray[i]+'%';
+   // return;
 }
 
 // var currPos = window.pageYOffset;
